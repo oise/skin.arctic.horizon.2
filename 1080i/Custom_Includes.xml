@@ -4,6 +4,7 @@
 		
 	<!-- PVR002 & PVR005 - Expressions for Channel Icon variable (ImagePVREPGIcon) and EPG Artwork variable (ImagePVRArtwork) -->
 	<expression name="Standard_Channel">Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,499)</expression>
+	<expression name="247_Channel">Integer.IsGreater(ListItem.ChannelNumberLabel,900)</expression>
 	<expression name="Live_Football_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,599)</expression>
 	<expression name="Live_EPL_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + String.StartsWith(ListItem.ChannelName,"EPL")</expression>
 	<expression name="Live_EFLC_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + String.StartsWith(ListItem.ChannelName,"EFL") + String.Contains(ListItem.ChannelName,"(CH)"</expression>
@@ -24,7 +25,8 @@
 
 	<!-- PVR002 - Channel Icon variable -->
 	<variable name="ImagePVREPGIcon">
-		<value condition="$EXP[Standard_Channel]">$INFO[ListItem.Icon]</value>				
+		<value condition="$EXP[Standard_Channel]">$INFO[ListItem.Icon]</value>
+		<value condition="$EXP[247_Channel]">$INFO[ListItem.Icon]</value>
 		<value condition="$EXP[Live_EPL_Anova] | $EXP[Live_EPL_FHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EPL.png</value>
 		<value condition="$EXP[Live_EFLC_Anova] | $EXP[Live_EFLC_FHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL C.png</value>
 		<value condition="$EXP[Live_EFL1_Anova] | $EXP[Live_EFL1_FHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL L1.png</value>
@@ -58,6 +60,7 @@
 	<variable name="Image_EPG_PVRArtwork">
 		<!-- 0. No information available -->
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,No information available)">$INFO[ListItem.Icon]</value>
+		<value condition="$EXP[247_Channel] + !Player.HasMedia">$INFO[ListItem.Icon]</value>
 		<!-- 1. ClearArt -->
 	    <value condition="$EXP[Standard_Channel] + !Player.HasMedia + !String.IsEmpty(Container(99950).ListItem.Property(base_clearart))">$INFO[Container(99950).ListItem.Property(base_clearart)]</value>
         <value condition="$EXP[Standard_Channel] + !Player.HasMedia + !String.IsEmpty(Container(99950).ListItem.Art(clearart))">$INFO[Container(99950).ListItem.Art(clearart)]</value>
@@ -95,6 +98,7 @@
 	<variable name="Image_EPG_PVRArtwork_Source">
 		<!-- 0. No information available -->
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,No information available)"></value>
+		<value condition="$EXP[247_Channel] + !Player.HasMedia"></value>
 		<!-- 1. ClearArt -->
 	    <value condition="$EXP[Standard_Channel] + !Player.HasMedia + !String.IsEmpty(Container(99950).ListItem.Property(base_clearart))">special://userdata/customisations\PVR\provider icons\TMDBHelper.png</value>
         <value condition="$EXP[Standard_Channel] + !Player.HasMedia + !String.IsEmpty(Container(99950).ListItem.Art(clearart))">special://userdata/customisations\PVR\provider icons\TMDBHelper.png</value>
@@ -168,6 +172,7 @@
 	<!-- PVR EPG Program Info variable -->
 	<variable name="TextPVREPGProgramInfo">
 		<value condition="$EXP[Standard_Channel]">$INFO[ListItem.Label]</value>
+		<value condition="$EXP[247_Channel]">$INFO[ListItem.ChannelName] ... All Day, Every Day</value>
 		<value condition="$EXP[Live_Football_NoMatch]">$INFO[ListItem.ChannelName] No Match Scheduled</value>
 		<value condition="$EXP[Live_NoMatch_SPFL_FHNatho]">$INFO[ListItem.ChannelName] No Match Scheduled</value>
 		<value condition="$EXP[Live_Football_Anova]">$INFO[ListItem.ChannelName]</value>
@@ -177,6 +182,7 @@
 	<!-- PVR EPG Program Plot variable -->
 	<variable name="TextPVREPGProgramPlot">
 		<value condition="$EXP[Standard_Channel]">$VAR[Label_Plot]</value>
+		<value condition="$EXP[247_Channel]">All Day, Every Day</value>
 		<value condition="$EXP[Live_Football_NoMatch]">No match scheduled on this channel.</value>
 		<value condition="$EXP[Live_NoMatch_SPFL_FHNatho]">No match scheduled on this channel.</value>
 		<value condition="$EXP[Live_EPL_Anova] | $EXP[Live_EPL_FHNatho]">Live match from the English Premier League.</value>
@@ -192,10 +198,10 @@
 	</variable>
 	
 	<!-- PVR009 - Expressions and variable for Channel provider icon -->
-	<expression name="FHNatho_Channel">Integer.IsLess(ListItem.ChannelNumberLabel,200) | Integer.IsGreater(ListItem.ChannelNumberLabel,599) </expression>
+	<expression name="FHNatho_Channel">Integer.IsLess(ListItem.ChannelNumberLabel,200) | [Integer.IsGreater(ListItem.ChannelNumberLabel,599) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,900)] </expression>
 	<expression name="Anova_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,201) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,599) </expression>
 	<expression name="BBC_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,401) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,410) </expression>
-	<expression name="ITV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,411) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,420) </expression>
+	<expression name="ITV_Channel">[Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,411) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,420)] | [Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,901) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,906)]</expression>
 	<expression name="STV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,421) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,430) </expression>
 	<expression name="All4_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,431) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,440) </expression>
 	<expression name="UKTVPlay_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,441) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,450) </expression>
@@ -215,19 +221,20 @@
 	</variable>
 	
 	<!-- PVR016 & PVR019 - Expressions and variable for PVR OSD Provider text label  and OSD Provider icon -->
-	<expression name="FHNatho_Channel_OSD">Integer.IsLess(VideoPlayer.ChannelNumberLabel,200) | Integer.IsGreater(VideoPlayer.ChannelNumberLabel,599) </expression>
+	<expression name="FHNatho_Channel_OSD">Integer.IsLess(VideoPlayer.ChannelNumberLabel,200) | [Integer.IsGreater(VideoPlayer.ChannelNumberLabel,599) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,900)] </expression>
 	<expression name="Anova_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,201) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,599) </expression>
 	<expression name="BBC_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,401) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,410) </expression>
-	<expression name="ITV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,411) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,420) </expression>
+	<expression name="ITV_Channel_OSD">[Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,411) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,420)] | [Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,901) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,906)]</expression>
 	<expression name="STV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,421) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,430) </expression>
 	<expression name="All4_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,431) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,440) </expression>
 	<expression name="UKTVPlay_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,441) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,450) </expression>
-	<expression name="CUTV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,451) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,499) </expression>
+	<expression name="Discovery_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,451) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,460) </expression>
+	<expression name="CUTV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,461) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,499) </expression>
 	<!-- PVR016 - Variable for OSD Provider Text Label (NOT USED) -->
 	<variable name="TextPVRProviderName">
 		<value condition="$EXP[FHNatho_Channel_OSD]">FH Natho IPTV</value>
 		<value condition="$EXP[BBC_Channel_OSD]">BBC iPlayer</value>
-		<value condition="$EXP[ITV_Channel_OSD]">ITV Hub</value>
+		<value condition="$EXP[ITV_Channel_OSD]">ITVX</value>
 		<value condition="$EXP[STV_Channel_OSD]">STV Player</value>
 		<value condition="$EXP[All4_Channel_OSD]">All4</value>
 		<value condition="$EXP[UKTVPlay_Channel_OSD]">UKTV Play</value>
