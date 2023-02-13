@@ -204,15 +204,17 @@
 	<expression name="ITV_Channel">[Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,411) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,420)] | [Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,901) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,906)]</expression>
 	<expression name="STV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,421) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,430) </expression>
 	<expression name="All4_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,431) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,440) </expression>
-	<expression name="UKTVPlay_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,441) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,450) </expression>
-	<expression name="Discovery_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,451) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,460) </expression>
-	<expression name="CUTV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,461) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,499) </expression>
+	<expression name="My5_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,441) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,450) </expression>
+	<expression name="UKTVPlay_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,451) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,460) </expression>
+	<expression name="Discovery_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,461) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,470) </expression>
+	<expression name="CUTV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,471) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,499) </expression>
 	<variable name="ImagePVRProviderIcon">
 		<value condition="$EXP[FHNatho_Channel]">special://userdata/customisations\PVR\provider icons\FHNatho.png</value>
 		<value condition="$EXP[BBC_Channel]">special://userdata/customisations\PVR\provider icons\BBC.png</value>
 		<value condition="$EXP[ITV_Channel]">special://userdata/customisations\PVR\provider icons\ITV.png</value>
 		<value condition="$EXP[STV_Channel]">special://userdata/customisations\PVR\provider icons\STV.png</value>
 		<value condition="$EXP[All4_Channel]">special://userdata/customisations\PVR\provider icons\Channel4.png</value>
+		<value condition="$EXP[My5_Channel]">special://userdata/customisations\PVR\provider icons\My5.png</value>
 		<value condition="$EXP[UKTVPlay_Channel]">special://userdata/customisations\PVR\provider icons\UKTVPlay.png</value>
 		<value condition="$EXP[Discovery_Channel]">special://userdata/customisations\PVR\provider icons\Discovery v2.png</value>
 		<value condition="$EXP[CUTV_Channel]">special://userdata/customisations\PVR\provider icons\CUTV.png</value>
@@ -227,9 +229,10 @@
 	<expression name="ITV_Channel_OSD">[Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,411) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,420)] | [Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,901) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,906)]</expression>
 	<expression name="STV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,421) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,430) </expression>
 	<expression name="All4_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,431) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,440) </expression>
-	<expression name="UKTVPlay_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,441) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,450) </expression>
-	<expression name="Discovery_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,451) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,460) </expression>
-	<expression name="CUTV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,461) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,499) </expression>
+	<expression name="My5_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,441) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,450) </expression>
+	<expression name="UKTVPlay_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,451) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,460) </expression>
+	<expression name="Discovery_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,461) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,470) </expression>
+	<expression name="CUTV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,471) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,499) </expression>
 	<!-- PVR016 - Variable for OSD Provider Text Label (NOT USED) -->
 	<variable name="TextPVRProviderName">
 		<value condition="$EXP[FHNatho_Channel_OSD]">FH Natho IPTV</value>
@@ -237,6 +240,7 @@
 		<value condition="$EXP[ITV_Channel_OSD]">ITVX</value>
 		<value condition="$EXP[STV_Channel_OSD]">STV Player</value>
 		<value condition="$EXP[All4_Channel_OSD]">All4</value>
+		<value condition="$EXP[My5_Channel_OSD]">My5</value>
 		<value condition="$EXP[UKTVPlay_Channel_OSD]">UKTV Play</value>
 		<value condition="$EXP[CUTV_Channel_OSD]">CUTV</value>
 		<value condition="$EXP[Anova_Channel_OSD]">Anova IPTV</value>
@@ -249,6 +253,7 @@
 		<value condition="$EXP[ITV_Channel_OSD]">special://userdata/customisations\PVR\provider icons\ITV.png</value>
 		<value condition="$EXP[STV_Channel_OSD]">special://userdata/customisations\PVR\provider icons\STV.png</value>
 		<value condition="$EXP[All4_Channel_OSD]">special://userdata/customisations\PVR\provider icons\Channel4.png</value>
+		<value condition="$EXP[My5_Channel_OSD]">special://userdata/customisations\PVR\provider icons\My5.png</value>
 		<value condition="$EXP[UKTVPlay_Channel_OSD]">special://userdata/customisations\PVR\provider icons\UKTVPlay.png</value>
 		<value condition="$EXP[CUTV_Channel_OSD]">special://userdata/customisations\PVR\provider icons\CUTV.png</value>
 		<value condition="$EXP[Anova_Channel_OSD]">special://userdata/customisations\PVR\provider icons\Anova.png</value>
