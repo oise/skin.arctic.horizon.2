@@ -207,7 +207,8 @@
 	<expression name="My5_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,441) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,450) </expression>
 	<expression name="UKTVPlay_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,451) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,460) </expression>
 	<expression name="Discovery_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,461) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,470) </expression>
-	<expression name="CUTV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,471) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,499) </expression>
+	<expression name="CUTV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,471) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,490) </expression>
+	<expression name="PlutoTV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,491) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,499) </expression>
 	<variable name="ImagePVRProviderIcon">
 		<value condition="$EXP[FHNatho_Channel]">special://userdata/customisations\PVR\provider icons\FHNatho.png</value>
 		<value condition="$EXP[BBC_Channel]">special://userdata/customisations\PVR\provider icons\BBC.png</value>
@@ -218,6 +219,7 @@
 		<value condition="$EXP[UKTVPlay_Channel]">special://userdata/customisations\PVR\provider icons\UKTVPlay.png</value>
 		<value condition="$EXP[Discovery_Channel]">special://userdata/customisations\PVR\provider icons\Discovery v2.png</value>
 		<value condition="$EXP[CUTV_Channel]">special://userdata/customisations\PVR\provider icons\CUTV.png</value>
+		<value condition="$EXP[PlutoTV_Channel]">special://userdata/customisations\PVR\provider icons\PlutoTV.png</value>
 		<value condition="$EXP[Anova_Channel]">special://userdata/customisations\PVR\provider icons\Anova.png</value>
 		<value>special://userdata/customisations\PVR\provider icons\NoProvider.png</value>
 	</variable>
@@ -232,7 +234,8 @@
 	<expression name="My5_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,441) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,450) </expression>
 	<expression name="UKTVPlay_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,451) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,460) </expression>
 	<expression name="Discovery_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,461) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,470) </expression>
-	<expression name="CUTV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,471) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,499) </expression>
+	<expression name="CUTV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,471) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,490) </expression>
+	<expression name="PlutoTV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,491) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,499) </expression>
 	<!-- PVR016 - Variable for OSD Provider Text Label (NOT USED) -->
 	<variable name="TextPVRProviderName">
 		<value condition="$EXP[FHNatho_Channel_OSD]">FH Natho IPTV</value>
@@ -243,6 +246,7 @@
 		<value condition="$EXP[My5_Channel_OSD]">My5</value>
 		<value condition="$EXP[UKTVPlay_Channel_OSD]">UKTV Play</value>
 		<value condition="$EXP[CUTV_Channel_OSD]">CUTV</value>
+		<value condition="$EXP[PlutoTV_Channel_OSD]">PlutoTV</value>
 		<value condition="$EXP[Anova_Channel_OSD]">Anova IPTV</value>
 		<value>Unknown</value>
 	</variable>	
@@ -256,6 +260,7 @@
 		<value condition="$EXP[My5_Channel_OSD]">special://userdata/customisations\PVR\provider icons\My5.png</value>
 		<value condition="$EXP[UKTVPlay_Channel_OSD]">special://userdata/customisations\PVR\provider icons\UKTVPlay.png</value>
 		<value condition="$EXP[CUTV_Channel_OSD]">special://userdata/customisations\PVR\provider icons\CUTV.png</value>
+		<value condition="$EXP[PlutoTV_Channel_OSD]">special://userdata/customisations\PVR\provider icons\PlutoTV.png</value>
 		<value condition="$EXP[Anova_Channel_OSD]">special://userdata/customisations\PVR\provider icons\Anova.png</value>
 		<value>special://userdata/customisations\PVR\provider icons\NoProvider.png</value>
 	</variable>
