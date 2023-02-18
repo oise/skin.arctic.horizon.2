@@ -217,7 +217,7 @@
 		<value condition="$EXP[All4_Channel]">special://userdata/customisations\PVR\provider icons\Channel4.png</value>
 		<value condition="$EXP[My5_Channel]">special://userdata/customisations\PVR\provider icons\My5.png</value>
 		<value condition="$EXP[UKTVPlay_Channel]">special://userdata/customisations\PVR\provider icons\UKTVPlay.png</value>
-		<value condition="$EXP[Discovery_Channel]">special://userdata/customisations\PVR\provider icons\Discovery v2.png</value>
+		<value condition="$EXP[Discovery_Channel]">special://userdata/customisations\PVR\provider icons\Discovery v3.png</value>
 		<value condition="$EXP[CUTV_Channel]">special://userdata/customisations\PVR\provider icons\CUTV.png</value>
 		<value condition="$EXP[PlutoTV_Channel]">special://userdata/customisations\PVR\provider icons\PlutoTV.png</value>
 		<value condition="$EXP[Anova_Channel]">special://userdata/customisations\PVR\provider icons\Anova.png</value>
@@ -245,6 +245,7 @@
 		<value condition="$EXP[All4_Channel_OSD]">All4</value>
 		<value condition="$EXP[My5_Channel_OSD]">My5</value>
 		<value condition="$EXP[UKTVPlay_Channel_OSD]">UKTV Play</value>
+		<value condition="$EXP[Discovery_Channel_OSD]">Discovery+</value>
 		<value condition="$EXP[CUTV_Channel_OSD]">CUTV</value>
 		<value condition="$EXP[PlutoTV_Channel_OSD]">PlutoTV</value>
 		<value condition="$EXP[Anova_Channel_OSD]">Anova IPTV</value>
@@ -259,6 +260,7 @@
 		<value condition="$EXP[All4_Channel_OSD]">special://userdata/customisations\PVR\provider icons\Channel4.png</value>
 		<value condition="$EXP[My5_Channel_OSD]">special://userdata/customisations\PVR\provider icons\My5.png</value>
 		<value condition="$EXP[UKTVPlay_Channel_OSD]">special://userdata/customisations\PVR\provider icons\UKTVPlay.png</value>
+		<value condition="$EXP[Discovery_Channel_OSD]">special://userdata/customisations\PVR\provider icons\Discovery v3.png</value>
 		<value condition="$EXP[CUTV_Channel_OSD]">special://userdata/customisations\PVR\provider icons\CUTV.png</value>
 		<value condition="$EXP[PlutoTV_Channel_OSD]">special://userdata/customisations\PVR\provider icons\PlutoTV.png</value>
 		<value condition="$EXP[Anova_Channel_OSD]">special://userdata/customisations\PVR\provider icons\Anova.png</value>
