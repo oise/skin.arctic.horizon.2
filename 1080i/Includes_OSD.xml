@@ -860,7 +860,8 @@
                         <texture colordiffuse="$VAR[ColorMainItem]" diffuse="diffuse/landscape_w356_h200.png">common/white.png</texture>
                     </control>
                     <control type="image">
-                        <texture background="true" diffuse="diffuse/landscape_w356_h200.png">$INFO[Player.Art(icon)]</texture>
+					    <!-- texture changed from $INFO[Player.Art(icon)] -->
+                        <texture background="true" diffuse="diffuse/landscape_w356_h200.png">$VAR[VideoOSD_PVRChannelIcon]</texture>
                         <aspectratio scalediffuse="false">keep</aspectratio>
                         <bordersize>grid_x04</bordersize>
                         <visible>String.IsEmpty(Pvr.EPGEventIcon)</visible>
