@@ -53,6 +53,11 @@
 		<value condition="Integer.IsEqual(VideoPlayer.ChannelNumberLabel,412)">special://userdata/customisations\PVR\PVR Logo Pack\ITV2 HD.png</value>
 		<value condition="Integer.IsEqual(VideoPlayer.ChannelNumberLabel,413)">special://userdata/customisations\PVR\PVR Logo Pack\ITV3 HD.png</value>
 		<value condition="Integer.IsEqual(VideoPlayer.ChannelNumberLabel,414)">special://userdata/customisations\PVR\PVR Logo Pack\ITV4 HD.png</value>
+		<value condition="Integer.IsEqual(VideoPlayer.ChannelNumberLabel,491)">special://userdata/customisations\PVR\PVR Logo Pack\5COPS SD.png</value>
+		<value condition="Integer.IsEqual(VideoPlayer.ChannelNumberLabel,492)">special://userdata/customisations\PVR\PVR Logo Pack\5EXPLORING BRITAIN SD.png</value>
+		<value condition="Integer.IsEqual(VideoPlayer.ChannelNumberLabel,493)">special://userdata/customisations\PVR\PVR Logo Pack\CLASSIC TV SD.png</value>
+		<value condition="Integer.IsEqual(VideoPlayer.ChannelNumberLabel,494)">special://userdata/customisations\PVR\PVR Logo Pack\GREAT BRITISH DRAMA SD.png</value>
+		<value condition="Integer.IsEqual(VideoPlayer.ChannelNumberLabel,495)">special://userdata/customisations\PVR\PVR Logo Pack\SHERLOCK SD.png</value>
 		<value>$INFO[Player.Art(icon)]</value>
 	</variable>
 	
