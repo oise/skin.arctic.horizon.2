@@ -223,51 +223,7 @@
 		<value condition="$EXP[Anova_Channel]">special://userdata/customisations\PVR\provider icons\Anova.png</value>
 		<value>special://userdata/customisations\PVR\provider icons\NoProvider.png</value>
 	</variable>
-	
-	<!-- PVR016 & PVR019 - Expressions and variable for PVR OSD Provider text label  and OSD Provider icon -->
-	<expression name="FHNatho_Channel_OSD">Integer.IsLess(VideoPlayer.ChannelNumberLabel,200) | [Integer.IsGreater(VideoPlayer.ChannelNumberLabel,599) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,900)] </expression>
-	<expression name="Anova_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,201) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,599) </expression>
-	<expression name="BBC_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,401) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,410) </expression>
-	<expression name="ITV_Channel_OSD">[Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,411) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,420)] | [Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,901) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,906)]</expression>
-	<expression name="STV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,421) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,430) </expression>
-	<expression name="All4_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,431) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,440) </expression>
-	<expression name="My5_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,441) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,450) </expression>
-	<expression name="UKTVPlay_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,451) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,460) </expression>
-	<expression name="Discovery_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,461) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,470) </expression>
-	<expression name="CUTV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,471) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,490) </expression>
-	<expression name="PlutoTV_Channel_OSD">Integer.IsGreaterOrEqual(VideoPlayer.ChannelNumberLabel,491) + Integer.IsLessOrEqual(VideoPlayer.ChannelNumberLabel,499) </expression>
-	<!-- PVR016 - Variable for OSD Provider Text Label (NOT USED) -->
-	<variable name="TextPVRProviderName">
-		<value condition="$EXP[FHNatho_Channel_OSD]">FH Natho IPTV</value>
-		<value condition="$EXP[BBC_Channel_OSD]">BBC iPlayer</value>
-		<value condition="$EXP[ITV_Channel_OSD]">ITVX</value>
-		<value condition="$EXP[STV_Channel_OSD]">STV Player</value>
-		<value condition="$EXP[All4_Channel_OSD]">All4</value>
-		<value condition="$EXP[My5_Channel_OSD]">My5</value>
-		<value condition="$EXP[UKTVPlay_Channel_OSD]">UKTV Play</value>
-		<value condition="$EXP[Discovery_Channel_OSD]">Discovery+</value>
-		<value condition="$EXP[CUTV_Channel_OSD]">CUTV</value>
-		<value condition="$EXP[PlutoTV_Channel_OSD]">PlutoTV</value>
-		<value condition="$EXP[Anova_Channel_OSD]">Anova IPTV</value>
-		<value>Unknown</value>
-	</variable>	
-	<!-- PVR019 - Variable for OSD Provider Icon -->
-	<variable name="ImageOSDProviderIcon">
-		<value condition="$EXP[FHNatho_Channel_OSD]">special://userdata/customisations\PVR\provider icons\FHNatho.png</value>
-		<value condition="$EXP[BBC_Channel_OSD]">special://userdata/customisations\PVR\provider icons\BBC.png</value>
-		<value condition="$EXP[ITV_Channel_OSD]">special://userdata/customisations\PVR\provider icons\ITV.png</value>
-		<value condition="$EXP[STV_Channel_OSD]">special://userdata/customisations\PVR\provider icons\STV.png</value>
-		<value condition="$EXP[All4_Channel_OSD]">special://userdata/customisations\PVR\provider icons\Channel4.png</value>
-		<value condition="$EXP[My5_Channel_OSD]">special://userdata/customisations\PVR\provider icons\My5.png</value>
-		<value condition="$EXP[UKTVPlay_Channel_OSD]">special://userdata/customisations\PVR\provider icons\UKTVPlay.png</value>
-		<value condition="$EXP[Discovery_Channel_OSD]">special://userdata/customisations\PVR\provider icons\Discovery v3.png</value>
-		<value condition="$EXP[CUTV_Channel_OSD]">special://userdata/customisations\PVR\provider icons\CUTV.png</value>
-		<value condition="$EXP[PlutoTV_Channel_OSD]">special://userdata/customisations\PVR\provider icons\PlutoTV.png</value>
-		<value condition="$EXP[Anova_Channel_OSD]">special://userdata/customisations\PVR\provider icons\Anova.png</value>
-		<value>special://userdata/customisations\PVR\provider icons\NoProvider.png</value>
-	</variable>
-	
-	
+		
 	<!-- SKIN BACKGROUNDS EXPRESSIONS & VARIABLES -->
 	<!-- Expressions for Skin Background variable (ImageSkinBackground) -->
 	<!-- HOME Window -->
