@@ -860,17 +860,19 @@
                         <texture colordiffuse="$VAR[ColorMainItem]" diffuse="diffuse/landscape_w356_h200.png">common/white.png</texture>
                     </control>
                     <control type="image">
-					    <!-- texture changed from $INFO[Player.Art(icon)] -->
+					    <!-- PVR017: texture changed from $INFO[Player.Art(icon)] -->
                         <texture background="true" diffuse="diffuse/landscape_w356_h200.png">$VAR[VideoOSD_PVRChannelIcon]</texture>
                         <aspectratio scalediffuse="false">keep</aspectratio>
                         <bordersize>grid_x04</bordersize>
+						<!-- PVR017: visibility changed from String.IsEmpty(Pvr.EPGEventIcon) -->
                         <visible>String.IsEmpty(Pvr.EPGEventIcon)</visible>
                     </control>
-                    <control type="image">
+					<!-- PVR017: texture disabled -->
+                    <!-- control type="image">
                         <texture background="true" diffuse="diffuse/landscape_w356_h200.png">$INFO[Pvr.EPGEventIcon]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                         <visible>!String.IsEmpty(Pvr.EPGEventIcon)</visible>
-                    </control>
+                    </control -->
                     <control type="progress">
                         <texturebg>pvr/progress-episode-b.png</texturebg>
                         <lefttexture colordiffuse="panel_fg_30">pvr/progress-episode-l.png</lefttexture>
