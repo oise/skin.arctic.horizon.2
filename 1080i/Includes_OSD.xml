@@ -865,7 +865,7 @@
                         <aspectratio scalediffuse="false">keep</aspectratio>
                         <bordersize>grid_x04</bordersize>
 						<!-- PVR017: visibility changed from String.IsEmpty(Pvr.EPGEventIcon) -->
-                        <visible>String.IsEmpty(Pvr.EPGEventIcon)</visible>
+                        <visible></visible>
                     </control>
 					<!-- PVR017: texture disabled -->
                     <!-- control type="image">
