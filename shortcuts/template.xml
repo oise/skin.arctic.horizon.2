@@ -172,16 +172,9 @@
         <property name="mainmenuLabel" tag="label" />
         <property name="mainmenuPath" tag="onclick" />
 
-        <property name="widgetEndRowAction" tag="property" attribute="name|widgetEndRowAction" value="31314">ActivateWindow(1120)</property>
-        <property name="widgetEndRowAction" tag="property" attribute="name|widgetEndRowAction" value="31315">ActivateWindow(1121)</property>
-        <property name="widgetEndRowAction" tag="property" attribute="name|widgetEndRowAction" value="31331">ActivateWindow(1122)</property>
-        <property name="widgetEndRowAction" tag="property" attribute="name|widgetEndRowAction" value="31328">ActivateWindow(1130)</property>
-        <property name="widgetEndRowAction" tag="property" attribute="name|widgetEndRowAction" value="31329">ActivateWindow(1131)</property>
-        <property name="widgetEndRowAction" tag="property" attribute="name|widgetEndRowAction" value="31367">ActivateWindow(1132)</property>
-
+        <property name="widgetEndRowAction" tag="property" attribute="name|widgetEndRowAction" />
         <property name="isWidgetEndRowAction" tag="property" attribute="name|widgetEndRowAction">True</property>
         <property name="isWidgetEndRowAction">False</property>
-
 
         <property name="includeCondition" tag="visible" />
         <property name="includeCondition">True</property>
@@ -349,7 +342,7 @@
                                 <param name="content">$SKINSHORTCUTS[FullscreenWidgetPath]</param>
                             </include>
                             <include content="Defs_AutoScroll" condition="$SKINSHORTCUTS[isFullscreenAutoScroll]">
-                                <param name="condition" value="!Control.HasFocus(301)" />
+                                <param name="condition" value="!Control.HasFocus(301) + !System.ScreenSaverActive" />
                             </include>
                             <onfocus>SetProperty(TMDbHelper.WidgetContainer,301)</onfocus>
                             <onfocus>SetProperty(Slide.WidgetInfoStyle,Full)</onfocus>
@@ -732,7 +725,7 @@
                         <param name="content">$INFO[Container($PYTHON[int(mainmenuid) * 1000 + 600 + int(id) - 1]).ListItem.FolderPath]</param>
                     </include>
                     <include content="Defs_AutoScroll" condition="$SKINSHORTCUTS[isAutoScroll] + !$SKINSHORTCUTS[isSubmenu]">
-                        <param name="condition" value="!Control.HasFocus($PYTHON[int(mainmenuid) * 1000 + 600 + int(id)])" />
+                        <param name="condition" value="!Control.HasFocus($PYTHON[int(mainmenuid) * 1000 + 600 + int(id)]) + !System.ScreenSaverActive" />
                     </include>
                     <include content="Object_ContentItem" condition="Skin.HasSetting(Home.EnableShowMoreWidget) + $SKINSHORTCUTS[widgetShowMore] + !$SKINSHORTCUTS[isAutoLimit] + !$SKINSHORTCUTS[isSubmenu]">
                         <param name="label">$LOCALIZE[31253]...</param>
@@ -1152,6 +1145,18 @@
         </controls>
     </other>
 
+    <other include="dialog-lookup">
+        <property name="submenuVisibility" tag="property" attribute="name|submenuVisibility"/>
+        <property name="labelID" tag="property" attribute="name|labelID" />
+        <controls>
+            <item>
+                <visible>String.IsEqual(Container(211).ListItem.Property(labelID),$SKINSHORTCUTS[labelID])</visible>
+                <property name="widgetEndRowAction">$INFO[Skin.String(widgetEndRowAction-$SKINSHORTCUTS[labelID])]</property>
+                <property name="menuOnUpAction">$INFO[Skin.String(menuOnUpAction-$SKINSHORTCUTS[labelID])]</property>
+            </item>
+        </controls>
+    </other>
+
     <other include="menubar">
         <property name="submenuVisibility" tag="property" attribute="name|submenuVisibility"/>
         <property name="mainmenuid" tag="property" attribute="name|id" value="$NUMBER[1]">1</property>
@@ -1310,7 +1315,7 @@
                 <scrolltime tween="quadratic">400</scrolltime>
                 <hitrect x="0" y="0" w="0" h="0" />
                 <include content="Defs_AutoScroll">
-                    <param name="condition" value="Control.HasFocus(300) | Control.HasFocus(399)" />
+                    <param name="condition" value="[Control.HasFocus(300) | Control.HasFocus(399)] +  + !System.ScreenSaverActive" />
                 </include>
                 <itemlayout width="1920" height="1080" />
                 <focusedlayout width="1920" height="1080" />
