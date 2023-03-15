@@ -25,8 +25,10 @@
     </variable>
 
     <variable name="Image_Background_Blur">
-	    <!-- BACK001 - START Add Home screen backgrounds (DISABLED) -->	
-		<!-- value condition="$EXP[Exp_HomeWindow_PVR]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
+	    <!-- BACK001 - START Add Home screen backgrounds -->	
+		<!-- If Background Image is set, use for all Home Page menu items, else dynamic for each menu item -->
+		<value condition="Window.IsVisible(Home) + !String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
+		<value condition="$EXP[Exp_HomeWindow_PVR]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
 		<value condition="$EXP[Exp_HomeWindow_OnDemand]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>
 		<value condition="$EXP[Exp_HomeWindow_Videos]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
 		<value condition="$EXP[Exp_HomeWindow_Music]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>
