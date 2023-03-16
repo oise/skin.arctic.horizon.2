@@ -41,6 +41,7 @@
 		<value condition="$EXP[Exp_OnDemandWindow_iPlayer]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\iPlayer.png</value>
 		<value condition="$EXP[Exp_OnDemandWindow_STVPlayer]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\STVPlayer.jpg</value>
 		<value condition="$EXP[Exp_OnDemandWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>
+		<value condition="$EXP[Exp_OnDemandWindow_TMDBHelper]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
 		<value condition="$EXP[Exp_VideoWindow] + !String.StartsWith(Container.Folderpath,videodb) + !$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>	
 		<value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>	
 		<value condition="String.Contains(Container.Folderpath,watchlist)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>	
