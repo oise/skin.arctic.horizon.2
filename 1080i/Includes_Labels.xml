@@ -435,7 +435,7 @@
 		<!-- START MISC003 -->
 		<value condition="String.StartsWith(ListItem.FolderPath,library://video)">Library</value>													<!-- MISC003 - Add condition for Library path screens (also see Label_Title_Main -->
 	    <value condition="String.StartsWith(ListItem.FolderPath,library://music)">Library</value>													<!-- MISC003 - Add condition for Library path screens (also see Label_Title_Main -->
-		<value condition="Container.Content(tvshows)">TV Shows</value>   																			<!-- MISC003 - Add condition for TV Shows -->
+		<!-- value condition="Container.Content(tvshows)">TV Shows</value -->   																			<!-- MISC003 - Add condition for TV Shows -->
 		<value condition="Container.Content(sets)">Movie Collections</value>  																		<!-- MISC003 - Add condition for Movie Sets -->
         <value condition="Container.Content(seasons)">$INFO[Container.ShowTitle] - $LOCALIZE[33054]</value>											<!-- MISC003 - Add TV Show Title to Seasons Header -->
 		<value condition="Container.Content(episodes) + !String.IsEmpty(Container.FolderName) + String.IsEqual(Container.FolderName,Container.ShowTitle)">$LOCALIZE[20360]</value>
