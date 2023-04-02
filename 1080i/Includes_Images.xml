@@ -41,6 +41,9 @@
     <variable name="Image_Background_Blur">
 	    <!-- BACK001 - START Add Home screen backgrounds -->	
 		<!-- If Background Image is set, use for all Home Page menu items, else dynamic for each menu item -->
+		<value condition="Window.IsVisible(Home) + String.IsEmpty(Skin.String(Background.Image)) + String.Contains(System.FriendlyName,LAGOS)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PT Blur.png</value>
+		<value condition="Window.IsVisible(Home) + String.IsEmpty(Skin.String(Background.Image)) + String.Contains(System.FriendlyName,UK)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\UK Blur.png</value>
+		<value condition="Window.IsVisible(Home) + String.IsEmpty(Skin.String(Background.Image)) + String.Contains(System.FriendlyName,ENVY)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\HP Envy.png</value>
 		<value condition="Window.IsVisible(Home) + !String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
 		<value condition="$EXP[Exp_HomeWindow_PVR]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
 		<value condition="$EXP[Exp_HomeWindow_OnDemand]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>
