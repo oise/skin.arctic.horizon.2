@@ -312,7 +312,7 @@
 	<expression name="ValentineTime">System.Date(02-14,02-15) + Skin.HasSetting(UseHolidayThemes)</expression>
 	<expression name="ValentineTheme">$EXP[ValentineTime] + $EXP[EnableHolidayThemes]</expression>
 	<!-- Halloween, fix date (31.10) -->
-	<expression name="HalloweenTime">System.Date(10-31,11-01) + !Skin.HasSetting(UseHolidayThemes)</expression>
+	<expression name="HalloweenTime">System.Date(10-31,11-01) + Skin.HasSetting(UseHolidayThemes)</expression>
 	<expression name="HalloweenTheme">$EXP[HalloweenTime] + $EXP[EnableHolidayThemes]</expression>
 	<!-- BACK006: END Holiday Theme Expressions -->
 
