@@ -291,7 +291,7 @@
 	</variable>
 	<!-- END Expressions and Variables for PVR EPG and Skin Backgrounds -->
 
-	<!-- BACK001 - Custom variable for Blur (referenced in Includes_Actions.xml/Action_Blur_Onload) -->	
+	<!-- BACK001 START: Custom variable for Blur (referenced in Includes_Actions.xml/Action_Blur_Onload) -->	
 	<expression name="Exp_BlurPoster">String.Contains(Container.ViewMode,"Poster")</expression>
 	<expression name="Exp_BlurThumb">Window.IsVisible(10502)</expression>
 	<expression name="Exp_BlurFanart">String.Contains(Container.ViewMode,"Landscape")</expression>	
@@ -300,5 +300,20 @@
 		<value condition="$EXP[Exp_BlurThumb]">Art(thumb)</value>
 		<value condition="$EXP[Exp_BlurFanart]">Art(fanart)</value>
 	</variable>
+	<!-- BACK001 END: Custom variable for Blur (referenced in Includes_Actions.xml/Action_Blur_Onload) -->	
+	
+	<!-- BACK006: START Holiday Theme Expressions -->
+	<expression name="EnableHolidayThemes">![VideoPlayer.IsFullscreen | Window.IsActive(fullscreeninfo) | Window.IsVisible(visualisation) | Window.IsVisible(1104)]</expression>
+	<!-- Christmas Time from 1. Advent to 2. Christmas Date, fix end date (26.12.) -->
+	<!--expression name="ChristmasTime">Skin.HasSetting(UseHolidayThemes)</expression -->
+	<expression name="ChristmasTime">System.Date(12-24,01-01) + Skin.HasSetting(UseHolidayThemes)</expression>
+	<expression name="ChristmasTheme">$EXP[ChristmasTime] + $EXP[EnableHolidayThemes]</expression>
+	<!-- Valentines Day, fix date (14.02) -->
+	<expression name="ValentineTime">System.Date(02-14,02-15) + Skin.HasSetting(UseHolidayThemes)</expression>
+	<expression name="ValentineTheme">$EXP[ValentineTime] + $EXP[EnableHolidayThemes]</expression>
+	<!-- Halloween, fix date (31.10) -->
+	<expression name="HalloweenTime">System.Date(10-31,11-01) + !Skin.HasSetting(UseHolidayThemes)</expression>
+	<expression name="HalloweenTheme">$EXP[HalloweenTime] + $EXP[EnableHolidayThemes]</expression>
+	<!-- BACK006: END Holiday Theme Expressions -->
 
 </includes>

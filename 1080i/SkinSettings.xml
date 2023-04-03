@@ -270,6 +270,16 @@
                                 <onclick condition="String.IsEmpty(Skin.String(Background.Image))">Skin.SetImage(Background.Image)</onclick>
                                 <label2>$INFO[Skin.String(Background.Image)]</label2>
                             </include>
+							<!-- BACK006: START Use Holiday Themes Setting -->
+							<include content="Dialog_Settings_Button" description="Use Holiday Themes">
+                                <param name="id">2090</param>
+                                <param name="control" value="radiobutton" />
+                                <label>Use Holiday Themes</label>
+                                <visible>Container(3).HasFocus(2)</visible>
+                                <onclick>Skin.ToggleSetting(UseHolidayThemes)</onclick>
+                                <selected>Skin.HasSetting(UseHolidayThemes)</selected>
+                            </include>
+							<!-- BACK006: END Use Holiday Themes Setting -->
                             <include content="Dialog_Settings_Label" description="PVR Label">
                                 <param name="id">2015</param>
                                 <label>$LOCALIZE[31000]</label>
