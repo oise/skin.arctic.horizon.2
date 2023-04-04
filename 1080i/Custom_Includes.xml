@@ -259,8 +259,8 @@
 	<!-- SYSTEM / PROGRAM Windows -->
 	<!-- MyPrograms.xml (10001), FileManager.xml (10003), Settings.xml (10004), SettingsSystemInfo.xml (10007), SettingsSystemInfo.xml (10016) -->
 	<!-- SettingsCategory.xml (10018, 10021, 10022, 10030, 10031, 10032, 10034, 10035), AddonBrowser.xml (10040), EventLog.xml (10050) -->
-	<!-- FileBrowser.xml (10026) -->
-	<expression name="Exp_SystemWindow">Window.IsVisible(10001) | Window.IsVisible(10003) | Window.IsVisible(10004) | Window.IsVisible(10007) | Window.IsVisible(10016) | Window.IsVisible(10018) | Window.IsVisible(10021) | Window.IsVisible(10022) | Window.IsVisible(10030) | Window.IsVisible(10031) | Window.IsVisible(10032) | Window.IsVisible(10034) | Window.IsVisible(10035) | Window.IsVisible(10040) | Window.IsVisible(10050) | Window.IsVisible(10126)</expression>
+	<!-- FileBrowser.xml (10026) Favourites Browser (10060) -->
+	<expression name="Exp_SystemWindow">Window.IsVisible(10001) | Window.IsVisible(10003) | Window.IsVisible(10004) | Window.IsVisible(10007) | Window.IsVisible(10016) | Window.IsVisible(10018) | Window.IsVisible(10021) | Window.IsVisible(10022) | Window.IsVisible(10030) | Window.IsVisible(10031) | Window.IsVisible(10032) | Window.IsVisible(10034) | Window.IsVisible(10035) | Window.IsVisible(10040) | Window.IsVisible(10050) | Window.IsVisible(10126) | Window.IsVisible(10060)</expression>
 
 	<!-- EXPANDED HOME Windows -->
 	<!-- Expanded conditions to make Home background dynamic depending on selected Menu item -->
