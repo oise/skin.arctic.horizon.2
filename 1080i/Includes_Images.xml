@@ -65,7 +65,7 @@
 		<value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\Music.png</value>	
 		<value condition="String.Contains(Container.Folderpath,autowidget) + String.Contains(Container.Folderpath,watchlist)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\On Demand.png</value>	
 		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\System.png</value>
-		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Common\Weather.png</value>
+		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\Weather.png</value>
 		<!-- BACK001 - END Other "Non-Blur" Backgrounds  -->
 		
 		<!-- START STANDARD AH2 CONDITIONS --> 
