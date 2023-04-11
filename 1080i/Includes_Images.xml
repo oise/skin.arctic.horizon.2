@@ -45,27 +45,27 @@
 		<value condition="Window.IsVisible(Home) + String.IsEmpty(Skin.String(Background.Image)) + String.Contains(System.FriendlyName,UK)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Home\UK Blur.png</value>
 		<value condition="Window.IsVisible(Home) + String.IsEmpty(Skin.String(Background.Image)) + String.Contains(System.FriendlyName,ENVY)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\HP Envy.png</value -->
 		<value condition="Window.IsVisible(Home) + !String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
-		<value condition="$EXP[Exp_HomeWindow_PVR]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\PVR.png</value>
-		<value condition="$EXP[Exp_HomeWindow_OnDemand]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\On Demand.png</value>
-		<value condition="$EXP[Exp_HomeWindow_Videos]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\Video.png</value>
-		<value condition="$EXP[Exp_HomeWindow_Music]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\Music.png</value>
-		<value condition="$EXP[Exp_HomeWindow_Weather]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\Weather.png</value>	
+		<value condition="$EXP[Exp_HomeWindow_PVR]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\PVR.png</value>
+		<value condition="$EXP[Exp_HomeWindow_OnDemand]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\On Demand.png</value>
+		<value condition="$EXP[Exp_HomeWindow_Videos]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\Video.png</value>
+		<value condition="$EXP[Exp_HomeWindow_Music]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\Music.png</value>
+		<value condition="$EXP[Exp_HomeWindow_Weather]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\Weather.png</value>	
 		<value condition="Window.IsVisible(Home) + !String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
 		<value condition="Window.IsVisible(Home)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Common\Fallback.png</value>
 		<!-- BACK001 - END Add Home screen backgrounds -->
 		
 		<!-- BACK001 - START Other "Non-Blur" Backgrounds -->
-		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\PVR2.png</value>
+		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\PVR2.png</value>
 		<value condition="$EXP[Exp_OnDemandWindow_iPlayer]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Common\iPlayer.png</value>
 		<value condition="$EXP[Exp_OnDemandWindow_STVPlayer]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Common\STVPlayer.png</value>
-		<value condition="$EXP[Exp_OnDemandWindow_TMDBHelper] + String.IsEqual(System.CurrentControlID,540)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\Video.png</value>
-		<value condition="$EXP[Exp_OnDemandWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\On Demand.png</value>
-		<value condition="$EXP[Exp_VideoWindow] + Container.Content(genres)">special://userdata/customisations\Skin Customisations\Set 1\AH2 Backgrounds\Set 1\Video.png</value>		
-		<value condition="$EXP[Exp_VideoWindow] + !String.StartsWith(Container.Folderpath,videodb) + !$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\Video.png</value>	
-		<value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\Music.png</value>	
-		<value condition="String.Contains(Container.Folderpath,autowidget) + String.Contains(Container.Folderpath,watchlist)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\On Demand.png</value>	
-		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\System.png</value>
-		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\Weather.png</value>
+		<value condition="$EXP[Exp_OnDemandWindow_TMDBHelper] + String.IsEqual(System.CurrentControlID,540)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\Video.png</value>
+		<value condition="$EXP[Exp_OnDemandWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\On Demand.png</value>
+		<value condition="$EXP[Exp_VideoWindow] + Container.Content(genres)">special://userdata/customisations\Skin Customisations\Set 4\AH2 Backgrounds\Set 4\Video.png</value>		
+		<value condition="$EXP[Exp_VideoWindow] + !String.StartsWith(Container.Folderpath,videodb) + !$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\Video.png</value>	
+		<value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\Music.png</value>	
+		<value condition="String.Contains(Container.Folderpath,autowidget) + String.Contains(Container.Folderpath,watchlist)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\On Demand.png</value>	
+		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\System.png</value>
+		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\Weather.png</value>
 		<!-- BACK001 - END Other "Non-Blur" Backgrounds  -->
 		
 		<!-- START STANDARD AH2 CONDITIONS --> 
@@ -75,12 +75,12 @@
 		<!-- END STANDARD AH2 CONDITIONS -->
 		
 		<!-- BACK001 - START Add conditions for other screens without blur images -->
-		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\PVR.png</value>
-		<value condition="$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\On Demand.png</value>	
-		<value condition="$EXP[Exp_VideoWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\Video.png</value>
-		<value condition="$EXP[Exp_MusicWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\Music.png</value>
+		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\PVR.png</value>
+		<value condition="$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\On Demand.png</value>	
+		<value condition="$EXP[Exp_VideoWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\Video.png</value>
+		<value condition="$EXP[Exp_MusicWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\Music.png</value>
 		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Common\Weather.png</value>
-		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 1\System.png</value>
+		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 4\System.png</value>
 		<!-- BACK001 - END Add conditions for other screens without blur images -->
 		
         <!-- BACK001 - Fallback changed from common/null.png -->
