@@ -73,7 +73,7 @@
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,IPL )">special://userdata/customisations\PVR\EPG Artwork\IPL2.jpg</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,EPL)">special://userdata/customisations\PVR\EPG Artwork\EPL.jpg</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,Premier League)">special://userdata/customisations\PVR\EPG Artwork\EPL.jpg</value>
-		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,PL )">special://userdata/customisations\PVR\EPG Artwork\EPL.jpg</value>
+		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.StartsWith(ListItem.Label,PL )">special://userdata/customisations\PVR\EPG Artwork\EPL.jpg</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,EFL)">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,National League)">special://userdata/customisations\PVR\EPG Artwork\NATIONAL LEAGUE.jpg</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,Scottish Premiership)">special://userdata/customisations\PVR\EPG Artwork\SPFL.jpg</value>
@@ -131,7 +131,7 @@
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,IPL )">special://userdata/customisations\PVR\provider icons\Custom.png</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,EPL)">special://userdata/customisations\PVR\provider icons\Custom.png</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,Premier League)">special://userdata/customisations\PVR\provider icons\Custom.png</value>
-		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,PL )">special://userdata/customisations\PVR\provider icons\Custom.png</value>
+		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.StartsWith(ListItem.Label,PL )">special://userdata/customisations\PVR\provider icons\Custom.png</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,EFL)">special://userdata/customisations\PVR\provider icons\Custom.png</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,National League)">special://userdata/customisations\PVR\provider icons\Custom.png</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,Scottish Premiership)">special://userdata/customisations\PVR\provider icons\Custom.png</value>
