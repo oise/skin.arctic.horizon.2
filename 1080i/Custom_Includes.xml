@@ -36,7 +36,7 @@
 		<value condition="$EXP[Live_NL_Anova] + $EXP[Live_Football_NoMatch]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE NATIONAL LEAGUE.png</value>
 		<value condition="$EXP[Live_Football_Anova] + $EXP[Live_Football_NoMatch]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL.png</value>				
 		<value condition="$EXP[Live_EFLPJT_FHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL.png</value>
-		<value condition="$EXP[Live_SPFL_FHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE SPFL.png</value>
+		<value condition="$EXP[Live_SPFL_FHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE SPFL PREMIERSHIP.png</value>
 		<value condition="$EXP[Live_Football_FHNatho] + $EXP[Live_Football_NoMatch]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL.png</value>			
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
