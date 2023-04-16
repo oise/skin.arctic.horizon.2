@@ -19,6 +19,7 @@
 	<expression name="Live_EFL2_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(L2)")</expression>
 	<expression name="Live_FAC_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(FA)")</expression>
 	<expression name="Live_EFLPJT_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(PJT)")</expression>
+	<expression name="Live_SPFLC_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + String.StartsWith(ListItem.ChannelName,"Scottish Championship ")</expression>
 	<expression name="Live_SPFL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE: SPFL ")</expression>
 	<expression name="Live_NoMatch_SPFL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699) + [String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 01") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 02") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 03") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 04") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 05") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 06")]</expression>
 	<expression name="Live_Football_NoMatch">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699) + String.EndsWith(ListItem.ChannelName,":")</expression>
@@ -37,6 +38,7 @@
 		<value condition="$EXP[Live_Football_Anova] + $EXP[Live_Football_NoMatch]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL.png</value>				
 		<value condition="$EXP[Live_EFLPJT_FHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL.png</value>
 		<value condition="$EXP[Live_SPFL_FHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE SPFL PREMIERSHIP.png</value>
+		<value condition="$EXP[Live_SPFLC_Anova]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE SPFL CHAMPIONSHIP.png</value>
 		<value condition="$EXP[Live_Football_FHNatho] + $EXP[Live_Football_NoMatch]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL.png</value>			
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
@@ -110,10 +112,12 @@
 		<value condition="[$EXP[Live_EFL2_Anova] | $EXP[Live_EFL2_FHNatho]] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
 		<value condition="[$EXP[Live_FAC_Anova] | $EXP[Live_FAC_FHNatho]] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\FAC.jpg</value>			
 		<value condition="$EXP[Live_NL_Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\NATIONAL LEAGUE.jpg</value>
+		<value condition="$EXP[Live_EFLPJT_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\PJT.jpg</value>
+		<value condition="$EXP[Live_SPFLC_Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\SPFL.png</value>
+		<value condition="$EXP[Live_SPFL_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\SPFL.png</value>	
 		<value condition="$EXP[Live_Football_Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>			
 		<value condition="$EXP[Live_EFLPJT_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\PJT.jpg</value>
-		<value condition="$EXP[Live_SPFL_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\SPFL.jpg</value>	
-		<value condition="$EXP[Live_Football_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>			
+				
 		<!-- 9. Fallback -->
 		<value condition="!Player.HasMedia">$INFO[ListItem.Icon]</value>
     </variable>
@@ -188,7 +192,8 @@
 		<value condition="$EXP[Live_EFL1_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
 		<value condition="$EXP[Live_EFL2_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
 		<value condition="$EXP[Live_EFLPJT_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\PJT.jpg</value>
-		<value condition="$EXP[Live_SPFL_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\SPFL.jpg</value>	
+		<value condition="$EXP[Live_SPFL_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\SPFL.png</value>
+		<value condition="$EXP[Live_SPFLC_Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\SPFL.png</value>		
 		<value condition="$EXP[Live_Football_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>		
 		<value condition="!Player.HasMedia">$INFO[ListItem.Icon]</value>
 	</variable>
@@ -234,7 +239,8 @@
 		<value condition="$EXP[Live_FAC_Anova] | $EXP[Live_FAC_FHNatho]">Live match from the English FA Cup.</value>
 		<value condition="$EXP[Live_NL_Anova]">Live match from the National Football League.</value>
 		<value condition="$EXP[Live_EFLPJT_FHNatho]">Live match from the EFL Papa John's Trophy.</value>
-		<value condition="$EXP[Live_SPFL_FHNatho]">Live match from the Scottish Professional Football League.</value>
+		<value condition="$EXP[Live_SPFL_FHNatho]">Live match from the Scottish Premiership.</value>
+		<value condition="$EXP[Live_SPFLC_Anova]">Live match from the Scottish Championship.</value>
 		<value condition="$EXP[Live_Football_FHNatho]">Live match from the English Football League.</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
