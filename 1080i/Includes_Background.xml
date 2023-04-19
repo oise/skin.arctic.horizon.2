@@ -311,7 +311,7 @@
 				<control type="label">
 					<left>1790</left>
 					<top>1000</top>
-					<width>50</width>
+					<width>80</width>
 					<height>60</height>
 					<!-- textcolor = Kodi logo colour -->
 					<textcolor>ff00b2e3</textcolor>
