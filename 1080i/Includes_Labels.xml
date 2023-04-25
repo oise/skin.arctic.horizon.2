@@ -439,7 +439,8 @@
         <value condition="Window.IsVisible(1117)">$LOCALIZE[31158] $LOCALIZE[14022]</value>
         <value condition="Window.IsVisible(1112)">[CAPITALIZE]$LOCALIZE[31007][/CAPITALIZE]</value>
         <value condition="Window.IsVisible(1115)">$INFO[Window.Property(Header)]$INFO[Container(6000).ListItem.Label, [COLOR=main_fg_70] &gt; [/COLOR] ,]</value>
-        <value condition="Window.IsVisible(MyPVRRecordings.xml)">$LOCALIZE[19017]</value>
+        <!-- MISC003 - Use "PVR VOD" as Recordings header (changed from $LOCALIZE[19017] -->
+        <value condition="Window.IsVisible(MyPVRRecordings.xml)">PVR VOD</value>
         <value condition="Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[19040]</value>
         <value condition="Window.IsVisible(MyPVRSearch.xml)">$LOCALIZE[137]</value>
         <value condition="Window.IsVisible(MyPlaylist.xml)">$LOCALIZE[559]</value>
