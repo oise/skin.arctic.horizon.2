@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <variable name="Label_OSD_Episodes_Title">
+        <value condition="VideoPlayer.Content(livetv)">$LOCALIZE[31085][COLOR=$VAR[ColorHighlight]]  •  [/COLOR]$INFO[Container(6401).CurrentItem,, $LOCALIZE[1443] ]$INFO[Container(6401).NumItems,, $LOCALIZE[10127]]</value>
+        <value condition="!Integer.IsEqual(VideoPlayer.PlaylistLength,1) + !Integer.IsEqual(VideoPlayer.PlaylistLength,0)">$LOCALIZE[559][COLOR=$VAR[ColorHighlight]]  •  [/COLOR]$INFO[Container(6401).CurrentItem,, $LOCALIZE[1443] ]$INFO[Container(6401).NumItems,, $LOCALIZE[36913]]</value>
+        <value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.TvShowDBID) + !String.IsEmpty(VideoPlayer.Season)">$LOCALIZE[20373]$INFO[VideoPlayer.Season, ,][COLOR=$VAR[ColorHighlight]]  •  [/COLOR]$INFO[Container(6401).CurrentItem,, $LOCALIZE[1443] ]$INFO[Container(6401).NumItems,, $LOCALIZE[20453]]</value>
+        <value condition="VideoPlayer.Content(episodes)">$LOCALIZE[20373]$INFO[VideoPlayer.Season, ,][COLOR=$VAR[ColorHighlight]]  •  [/COLOR]$INFO[Container(6401).CurrentItem,, $LOCALIZE[1443] ]$INFO[Container(6401).NumItems,, $LOCALIZE[20453]]</value>
+    </variable>
+
     <variable name="Label_WatchedCount">
         <value condition="!System.Setting(hidewatched)">$LOCALIZE[20367] ($INFO[Container.TotalWatched,,]$INFO[Container.NumItems, $LOCALIZE[1443] ,])</value>
         <value>$LOCALIZE[31386] ($INFO[Container.NumItems,,])</value>
@@ -453,16 +460,15 @@
 		
         <value condition="!String.IsEqual(Container.FolderName,Titles) + !String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>	<!-- MISC003 - Condition changed to include !String.IsEqual(Container.FolderName,Titles) + --> <!-- eg Movie Set name -->
         <value condition="Container.Content(movies)">Movies</value>      																	<!-- MISC003 - Add condition for Movies -->
+        <value condition="Window.IsVisible(MyPVRGuide.xml) + !String.IsEmpty(Container(11).LIstItem.Label)">$INFO[Container(11).LIstItem.Label]</value>
 		<value condition="Window.IsVisible(MyPVRGuide.xml)">[CAPITALIZE]$LOCALIZE[10702][/CAPITALIZE]</value>										<!-- MISC003 - Use "TV Guide" as EPG header (change value from $LOCALIZE[19069]) -->
 		<!-- END MISC003 -->
-
         <value condition="Window.IsVisible(10025)">$LOCALIZE[14236]</value>
         <value condition="Window.IsVisible(10502)">$LOCALIZE[14237]</value>
         <value condition="Window.IsVisible(MyFavourites.xml)">$LOCALIZE[1036]</value>
         <value condition="Window.IsVisible(MyGames.xml)">$LOCALIZE[10821]</value>
         <value>$LOCALIZE[10000]</value>
     </variable>
-
 
     <variable name="Label_Header_SkinShortcuts">
         <value condition="String.IsEqual(Window.Property(groupname),searchmenu)">[CAPITALIZE]$LOCALIZE[31151][/CAPITALIZE]</value>
