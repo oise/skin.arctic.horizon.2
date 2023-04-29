@@ -68,9 +68,9 @@
 		<value condition="Window.IsVisible(Home) + !String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
 		<value condition="$EXP[Exp_HomeWindow_PVR]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\PVR.png</value>
 		<value condition="$EXP[Exp_HomeWindow_OnDemand]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\On Demand.png</value>
-		<value condition="$EXP[Exp_HomeWindow_Videos]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\Video.png</value>
-		<value condition="$EXP[Exp_HomeWindow_Music]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\Music.png</value>
 		<value condition="$EXP[Exp_HomeWindow_Weather]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\Weather.png</value>	
+		<value condition="$EXP[Exp_HomeWindow_Videos]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\Video.png</value>
+		<value condition="$EXP[Exp_HomeWindow_Music]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\Music.png</value>		
 		<value condition="Window.IsVisible(Home) + !String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
 		<value condition="Window.IsVisible(Home)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Common\Fallback.png</value>
 		<!-- BACK001 - END Add Home screen backgrounds -->
