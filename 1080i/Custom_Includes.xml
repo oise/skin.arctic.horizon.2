@@ -66,7 +66,7 @@
 	<!-- PVR005 - START EPG Artwork from TMDBHelper and Skin Helper Service -->	
 	<variable name="Image_EPG_PVRArtwork">
 		<!-- 0. No information available -->
-		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,No information available)">$INFO[ListItem.Icon]</value>
+		<value condition="System.Platform.Android">$INFO[ListItem.Icon]</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,Stay tuned for next broadcast)">$INFO[ListItem.Icon]</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,Channel Off Air)">$INFO[ListItem.Icon]</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,Indian Premier League)">special://userdata/customisations\PVR\EPG Artwork\IPL2.jpg</value>
@@ -124,6 +124,7 @@
 	
 	<variable name="Image_EPG_PVRArtwork_Source">
 		<!-- 0. No information available -->
+		<value condition="System.Platform.Android"></value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,No information available)"></value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,Stay tuned for next broadcast)"></value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,Channel Off Air)"></value>
@@ -175,6 +176,7 @@
 	
 	<!-- PVR005 - START PVR EPG Artwork variable from Skin Helper Service only (NOT IN USE) -->	
 	<variable name="ImagePVRArtwork">
+	    <value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,No information available)">$INFO[ListItem.Icon]</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,No information available)">$INFO[ListItem.Icon]</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb)) + String.Contains(ListItem.Label,News)">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>		
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ClearArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearArt)]</value>
