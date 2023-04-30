@@ -313,7 +313,7 @@
 	<expression name="Exp_HomeWindow_OnDemand">Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,1)</expression>
 	<expression name="Exp_HomeWindow_Videos">Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,2)</expression>
 	<expression name="Exp_HomeWindow_Music">Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,3)</expression>
-	<expression name="Exp_HomeWindow_Weather">[Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,4)] | [Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,2) + [System.Platform.Android]] </expression>
+	<expression name="Exp_HomeWindow_Weather">[Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,4)] | [Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,3) + [System.Platform.Android]] </expression>
 
 	<!-- Skin Background variable -->
 	<variable name="ImageSkinBackground">
