@@ -474,6 +474,6 @@
 		<!-- PVR012 - IsNew indicator added -->
 		<value condition="ListItem.IsNew">indicator/isnew2.png</value>
         <!-- PVR004 - indicator changed from library.png -->
-        <value condition="ListItem.IsPlayable + !Skin.HasSetting(Indicator.DisablePVRGuideCatchUp)">indicator/hasarchive2.png</value>
+        <value condition="ListItem.IsPlayable + !Skin.HasSetting(Indicator.DisablePVRGuideCatchUp)">indicator/hasarchive3.png</value>
     </variable>
 </includes>
