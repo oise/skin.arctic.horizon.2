@@ -130,7 +130,6 @@
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,No information available)"></value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,Stay tuned for next broadcast)"></value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,Channel Off Air)"></value>
-		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,No information available)"></value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,Indian Premier League)">special://userdata/customisations\PVR\provider icons\Custom.png</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,IPL )">special://userdata/customisations\PVR\provider icons\Custom.png</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.Contains(ListItem.Label,EPL)">special://userdata/customisations\PVR\provider icons\Custom.png</value>
