@@ -112,6 +112,7 @@
 		<value condition="[$EXP[Live_EFLC_Anova] | $EXP[Live_EFLC_FHNatho]] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
 		<value condition="[$EXP[Live_EFL1_Anova] | $EXP[Live_EFL1_FHNatho]] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
 		<value condition="[$EXP[Live_EFL2_Anova] | $EXP[Live_EFL2_FHNatho]] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
+		<value condition="$EXP[Live_Football_FHNatho] + $EXP[Live_Football_NoMatch] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
 		<value condition="[$EXP[Live_FAC_Anova] | $EXP[Live_FAC_FHNatho]] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\FAC.jpg</value>			
 		<value condition="$EXP[Live_NL_Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\NATIONAL LEAGUE.jpg</value>
 		<value condition="$EXP[Live_EFLPJT_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\PJT.jpg</value>
@@ -119,7 +120,7 @@
 		<value condition="$EXP[Live_SPFL_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\SPFL.png</value>	
 		<value condition="$EXP[Live_Football_Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>			
 		<value condition="$EXP[Live_EFLPJT_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\PJT.jpg</value>
-		<value condition="$EXP[Live_Football_FHNatho]+ !Player.HasMedia">special ://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>		
+
 		<!-- 9. Fallback -->
 		<value condition="!Player.HasMedia">$INFO[ListItem.Icon]</value>
     </variable>
