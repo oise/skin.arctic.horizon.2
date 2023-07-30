@@ -5,24 +5,24 @@
 	<!-- PVR002 & PVR005 - Expressions for Channel Icon variable (ImagePVREPGIcon) and EPG Artwork variable (ImagePVRArtwork) -->
 	<expression name="Standard_Channel">Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,499)</expression>
 	<expression name="247_Channel">Integer.IsGreater(ListItem.ChannelNumberLabel,900)</expression>
-	<expression name="Live_Football_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,599)</expression>
-	<expression name="Live_EPL_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + String.StartsWith(ListItem.ChannelName,"EPL")</expression>
-	<expression name="Live_EFLC_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,512) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,524)</expression>
-	<expression name="Live_EFL1_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,525) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,537)</expression>
-	<expression name="Live_EFL2_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,538) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,551)</expression>
-	<expression name="Live_FAC_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + String.StartsWith(ListItem.ChannelName,"EFL") + String.Contains(ListItem.ChannelName,"(FA)"</expression>
-	<expression name="Live_NL_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + String.StartsWith(ListItem.ChannelName,"NATIONAL LEAGUE")</expression>
-	<expression name="Live_Football_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699)</expression>
-	<expression name="Live_EPL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EPL ")</expression>
-	<expression name="Live_EFLC_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(CH)")</expression>
-	<expression name="Live_EFL1_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(L1)")</expression>
-	<expression name="Live_EFL2_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(L2)")</expression>
-	<expression name="Live_FAC_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(FA)")</expression>
-	<expression name="Live_EFLPJT_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(PJT)")</expression>
-	<expression name="Live_SPFLC_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + String.StartsWith(ListItem.ChannelName,"Scottish Championship ")</expression>
-	<expression name="Live_SPFL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE: SPFL ")</expression>
-	<expression name="Live_NoMatch_SPFL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699) + [String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 01") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 02") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 03") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 04") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 05") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 06")]</expression>
-	<expression name="Live_Football_NoMatch">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699) + String.EndsWith(ListItem.ChannelName,":")</expression>
+	<expression name="Live_Football_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699)</expression>
+	<expression name="Live_EPL_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699) + String.StartsWith(ListItem.ChannelName,"EPL")</expression>
+	<expression name="Live_EFLC_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699) + String.StartsWith(ListItem.ChannelName,"CHAMP")</expression>
+	<expression name="Live_EFL1_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699) + String.StartsWith(ListItem.ChannelName,"L1")</expression>
+	<expression name="Live_EFL2_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699) + String.StartsWith(ListItem.ChannelName,"L2")</expression>
+	<expression name="Live_FAC_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699) + String.StartsWith(ListItem.ChannelName,"EFL") + String.Contains(ListItem.ChannelName,"(FA)"</expression>
+	<expression name="Live_NL_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699) + String.StartsWith(ListItem.ChannelName,"NATIONAL LEAGUE")</expression>
+	<expression name="Live_SPFLC_Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699) + String.StartsWith(ListItem.ChannelName,"Scottish Championship ")</expression>
+	<expression name="Live_Football_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,701) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,799)</expression>
+	<expression name="Live_EPL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,701) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,799) + String.Contains(ListItem.ChannelName,"LIVE EPL ")</expression>
+	<expression name="Live_EFLC_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,701) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,799) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(CH)")</expression>
+	<expression name="Live_EFL1_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,701) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,799) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(L1)")</expression>
+	<expression name="Live_EFL2_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,701) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,799) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(L2)")</expression>
+	<expression name="Live_FAC_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,701) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,799) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(FA)")</expression>
+	<expression name="Live_EFLPJT_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,701) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,799) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(PJT)")</expression>	
+	<expression name="Live_SPFL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,701) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,799) + String.Contains(ListItem.ChannelName,"LIVE: SPFL ")</expression>
+	<expression name="Live_NoMatch_SPFL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,701) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,799) + [String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 01") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 02") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 03") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 04") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 05") | String.IsEqual(ListItem.ChannelName,"LIVE: SPFL 06")]</expression>
+	<expression name="Live_Football_NoMatch">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,501) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,799) + String.EndsWith(ListItem.ChannelName,":")</expression>
 
 	<!-- PVR002 - Channel Icon variable -->
 	<variable name="ImagePVREPGIcon">
