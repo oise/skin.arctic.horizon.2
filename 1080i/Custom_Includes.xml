@@ -119,7 +119,7 @@
 		<value condition="$EXP[Live_SPFL_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\SPFL.png</value>	
 		<value condition="$EXP[Live_Football_Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>			
 		<value condition="$EXP[Live_EFLPJT_FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\PJT.jpg</value>
-				
+		<value condition="$EXP[Live_Football_FHNatho]+ !Player.HasMedia">special ://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>		
 		<!-- 9. Fallback -->
 		<value condition="!Player.HasMedia">$INFO[ListItem.Icon]</value>
     </variable>
