@@ -112,11 +112,25 @@
                     <right>0</right>
                     <bordersize>10</bordersize>
                 </include>
+				
+				<!-- PVR002: For Club Specific Channels, display Icon (Club Badge) -->
+				<control type="image">	
+					<left>320</left>
+					<top>12</top>
+					<width>60</width>
+					<height>60</height>									
+					<texture>$INFO[ListItem.Icon]</texture>
+					<align>center</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<visible>$EXP[Live_Football_Club_Channel]</visible>
+				</control>
+								
 				<!-- PVR002 - END EPG: Remove Channel Name and Replace with Icon-->
 				<!-- PVR003 - START EPG: Add Channel Resolution Icon (special icons for Live Football channels) -->
 				<control type="image">
 					<!-- PVR003: left previously 300, top previously 30 for earlier icons -->
-					<left>310</left>
+					<left>315</left>
 					<top>31</top>
 					<width>70</width>
 					<height>38</height>									
@@ -124,19 +138,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<aspectratio>keep</aspectratio>
-				</control>
-				<!-- Anova Live Football team icon added (DISABLED) -->
-				<!-- control type="image">
-					<left>320</left>
-					<top>10</top>
-					<width>60</width>
-					<height>60</height>									
-					<texture>$INFO[ListItem.Icon]</texture>
-					<align>center</align>
-					<aligny>center</aligny>
-					<aspectratio>keep</aspectratio>
-					<visible>$EXP[Live_Football_Anova]</visible>	
-				</control -->
+				</control>				
 				<!-- PVR003 - END END EPG: Add Channel Resolution Icon (special icons for Live Football channels)-->
 				<!-- PVR004 - START EPG: Add Channel "Catch-up" Icon (DISABLED) -->
 				<!-- control type="image">
