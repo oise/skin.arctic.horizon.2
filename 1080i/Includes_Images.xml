@@ -84,7 +84,7 @@
 		<value condition="$EXP[Exp_VideoWindow] + Container.Content(genres)">special://userdata/customisations\Skin Customisations\Set 9\AH2 Backgrounds\Set 9\Video.png</value>		
 		<value condition="$EXP[Exp_VideoWindow] + !String.StartsWith(Container.Folderpath,videodb) + !$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\Video.png</value>	
 		<value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\Music.png</value>	
-		<value condition="String.Contains(Container.Folderpath,autowidget) + String.Contains(Container.Folderpath,watchlist)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\On Demand.png</value>	
+		<value condition="String.Contains(Container.Folderpath,autowidget) + String.Contains(Container.Folderpath,vod)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\On Demand.png</value>	
 		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\System.png</value>
 		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Set 9\Weather.png</value>
 		<!-- BACK001 - END Other "Non-Blur" Backgrounds  -->
