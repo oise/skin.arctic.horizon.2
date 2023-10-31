@@ -586,6 +586,8 @@
         <value condition="Window.IsVisible(AddonBrowser.xml) + ListItem.Property(addon.isinstalled)">indicator/library.png</value>
     </variable>
     <variable name="Image_Overlay_Backing_C50">
+		<!-- MISC008: condition for an online video library item -->
+		<value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,movie)] + !String.Contains(ListItem.Path,Kodi Libraries)">indicator/circle</value>
         <value condition="[String.IsEqual(Container(50).ListItem.DBType,tvshow) | String.IsEqual(Container(50).ListItem.DBType,season) | String.IsEqual(Container(50).ListItem.DBType,episode)] + !Integer.IsEqual(Container(50).ListItem.Property(UnWatchedEpisodes),0) + !Skin.HasSetting(Indicator.DisableEpisodes)">indicator/circle</value>
         <value condition="Container(50).ListItem.IsRecording">indicator/circle</value>
         <value condition="Container(50).ListItem.HasTimer">indicator/circle</value>
@@ -604,6 +606,8 @@
         <value condition="Window.IsVisible(AddonBrowser.xml) + Container(50).ListItem.Property(addon.isinstalled)">indicator/circle</value>
     </variable>
     <variable name="Image_Overlay_Backing">
+		<!-- MISC008: condition for an online video library item -->
+	    <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,movie)] + !String.Contains(ListItem.Path,Kodi Libraries)">indicator/circle</value>
         <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + !Integer.IsEqual(ListItem.Property(UnWatchedEpisodes),0) + !Skin.HasSetting(Indicator.DisableEpisodes)">indicator/circle</value>
         <value condition="ListItem.IsRecording">indicator/circle</value>
         <value condition="ListItem.HasTimer">indicator/circle</value>
