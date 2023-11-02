@@ -843,7 +843,7 @@
 				<!-- MISC008: START indicator for an online video library item -->
 				<control type="image">
                     <include content="Dimension_Padding"><param name="pad" value="20" /></include>				
-                    <texture>indicator/onlinevideostream.png</texture>
+                    <texture colordiffuse="$VAR[ColorGradient]">indicator/onlinevideostream.png</texture>
 					<aspectratio></aspectratio>
 					<visible>String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | String.IsEqual($PARAM[listitem].DBType,movie)</visible>
 					<visible>!String.Contains(ListItem.Path,Kodi Libraries)</visible>
