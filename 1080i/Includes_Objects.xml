@@ -845,8 +845,7 @@
                     <include content="Dimension_Padding"><param name="pad" value="20" /></include>				
                     <texture colordiffuse="$VAR[ColorGradient]">indicator/onlinevideostream.png</texture>
 					<aspectratio></aspectratio>
-					<visible>String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | String.IsEqual($PARAM[listitem].DBType,movie)</visible>
-					<visible>!String.Contains(ListItem.Path,Kodi Libraries)</visible>
+					<visible>[String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | String.IsEqual($PARAM[listitem].DBType,movie)] + [String.Contains(ListItem.Path,Video Library VOD Streams) | String.Contains(ListItem.Path,context.addtolib)]</visible>
                 </control>
 				<!-- MISC008: END indicator for an online video library item -->
                 <control type="image">

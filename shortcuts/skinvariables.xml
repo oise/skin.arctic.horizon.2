@@ -183,6 +183,9 @@
 
     <variable name="Image_Overlay" containers="50">
 
+		<!-- MISC008: condition for an online video library item -->
+	    <value condition="[String.IsEqual({listitem}.DBType,tvshow) | String.IsEqual({listitem}.DBType,season) | String.IsEqual({listitem}.DBType,movie)] + [String.Contains({listitem}.Path,Video Library VOD Streams) | String.Contains({listitem}.Path,context.addtolib)]">indicator/circle</value>
+ 
         <!-- Unwatched Episodes -->
         <value condition="[String.IsEqual({listitemposition}.DBType,tvshow) | String.IsEqual({listitemposition}.DBType,season) | String.IsEqual({listitemposition}.DBType,episode)] + !Integer.IsEqual({listitemposition}.Property(UnWatchedEpisodes),0) + !{listitemposition}.IsResumable + !Skin.HasSetting(Indicator.DisableEpisodes)">common/null.png</value>
 		
@@ -223,7 +226,7 @@
     <variable name="Image_Overlay_Backing" containers="50">
 	
 		<!-- MISC008: condition for an online video library item -->
-	    <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,movie)] + !String.Contains(ListItem.Path,Kodi Libraries)">indicator/circle</value>
+	    <value condition="[String.IsEqual({listitem}.DBType,tvshow) | String.IsEqual({listitem}.DBType,season) | String.IsEqual({listitem}.DBType,movie)] + [String.Contains({listitem}.Path,Video Library VOD Streams) | String.Contains({listitem}.Path,context.addtolib)]">indicator/circle</value>
         
 		<!-- Unwatched Episodes -->
         <value condition="[String.IsEqual({listitemposition}.DBType,tvshow) | String.IsEqual({listitemposition}.DBType,season) | String.IsEqual({listitemposition}.DBType,episode)] + !Integer.IsEqual({listitemposition}.Property(UnWatchedEpisodes),0) + !Skin.HasSetting(Indicator.DisableEpisodes)">indicator/circle</value>

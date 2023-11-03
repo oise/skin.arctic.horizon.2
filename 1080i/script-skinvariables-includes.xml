@@ -548,6 +548,7 @@
         <value condition="True">$INFO[ListItem.Icon]</value>
     </variable>
     <variable name="Image_Overlay_C50">
+        <value condition="[String.IsEqual(Container(50).ListItem.DBType,tvshow) | String.IsEqual(Container(50).ListItem.DBType,season) | String.IsEqual(Container(50).ListItem.DBType,movie)] + [String.Contains(Container(50).ListItem.Path,Video Library VOD Streams) | String.Contains(Container(50).ListItem.Path,context.addtolib)]">indicator/circle</value>
         <value condition="[String.IsEqual(Container(50).ListItem.DBType,tvshow) | String.IsEqual(Container(50).ListItem.DBType,season) | String.IsEqual(Container(50).ListItem.DBType,episode)] + !Integer.IsEqual(Container(50).ListItem.Property(UnWatchedEpisodes),0) + !Container(50).ListItem.IsResumable + !Skin.HasSetting(Indicator.DisableEpisodes)">common/null.png</value>
         <value condition="Container(50).ListItem.IsRecording">indicator/record.png</value>
         <value condition="Container(50).ListItem.HasTimer">indicator/timer.png</value>
@@ -567,6 +568,7 @@
         <value condition="Window.IsVisible(AddonBrowser.xml) + Container(50).ListItem.Property(addon.isinstalled)">indicator/library.png</value>
     </variable>
     <variable name="Image_Overlay">
+        <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,movie)] + [String.Contains(ListItem.Path,Video Library VOD Streams) | String.Contains(ListItem.Path,context.addtolib)]">indicator/circle</value>
         <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + !Integer.IsEqual(ListItem.Property(UnWatchedEpisodes),0) + !ListItem.IsResumable + !Skin.HasSetting(Indicator.DisableEpisodes)">common/null.png</value>
         <value condition="ListItem.IsRecording">indicator/record.png</value>
         <value condition="ListItem.HasTimer">indicator/timer.png</value>
@@ -586,8 +588,7 @@
         <value condition="Window.IsVisible(AddonBrowser.xml) + ListItem.Property(addon.isinstalled)">indicator/library.png</value>
     </variable>
     <variable name="Image_Overlay_Backing_C50">
-		<!-- MISC008: condition for an online video library item -->
-		<value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,movie)] + !String.Contains(ListItem.Path,Kodi Libraries)">indicator/circle</value>
+        <value condition="[String.IsEqual(Container(50).ListItem.DBType,tvshow) | String.IsEqual(Container(50).ListItem.DBType,season) | String.IsEqual(Container(50).ListItem.DBType,movie)] + [String.Contains(Container(50).ListItem.Path,Video Library VOD Streams) | String.Contains(Container(50).ListItem.Path,context.addtolib)]">indicator/circle</value>
         <value condition="[String.IsEqual(Container(50).ListItem.DBType,tvshow) | String.IsEqual(Container(50).ListItem.DBType,season) | String.IsEqual(Container(50).ListItem.DBType,episode)] + !Integer.IsEqual(Container(50).ListItem.Property(UnWatchedEpisodes),0) + !Skin.HasSetting(Indicator.DisableEpisodes)">indicator/circle</value>
         <value condition="Container(50).ListItem.IsRecording">indicator/circle</value>
         <value condition="Container(50).ListItem.HasTimer">indicator/circle</value>
@@ -606,8 +607,7 @@
         <value condition="Window.IsVisible(AddonBrowser.xml) + Container(50).ListItem.Property(addon.isinstalled)">indicator/circle</value>
     </variable>
     <variable name="Image_Overlay_Backing">
-		<!-- MISC008: condition for an online video library item -->
-	    <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,movie)] + !String.Contains(ListItem.Path,Kodi Libraries)">indicator/circle</value>
+        <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,movie)] + [String.Contains(ListItem.Path,Video Library VOD Streams) | String.Contains(ListItem.Path,context.addtolib)]">indicator/circle</value>
         <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + !Integer.IsEqual(ListItem.Property(UnWatchedEpisodes),0) + !Skin.HasSetting(Indicator.DisableEpisodes)">indicator/circle</value>
         <value condition="ListItem.IsRecording">indicator/circle</value>
         <value condition="ListItem.HasTimer">indicator/circle</value>
