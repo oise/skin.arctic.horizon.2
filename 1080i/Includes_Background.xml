@@ -280,7 +280,7 @@
             </include>
             <include>Background_KeyArt</include>
 			<!-- BACK007: Foreground Artwork only for media -->
-			<visible>!String.IsEmpty(Container.Content)</visible>
+			<visible>!String.IsEmpty(Container.Content) | Window.IsVisible(Home)</visible>
         </include>
         <include content="Object_Control" condition="Skin.String(ForegroundStyle,FlixArt)">
             <param name="control">group</param>
@@ -292,7 +292,7 @@
             </include>
             <include>Background_FlixArt</include>
 			<!-- BACK007: Foreground Artwork only for media -->
-			<visible>!String.IsEmpty(Container.Content)</visible>
+			<visible>!String.IsEmpty(Container.Content) | Window.IsVisible(Home)</visible>
         </include>
     </include>
 
